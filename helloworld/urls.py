@@ -18,6 +18,6 @@ from django.contrib import admin
 from purplemindApp import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls,  views.home, name='home'),
+    url(r'^admin/', admin.site.urls,  views, name='home'),
 ]
 
