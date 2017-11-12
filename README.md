@@ -10,6 +10,8 @@ An utterly fantastic project starter template for Django 1.11.
 
 ## How to Use
 
+test
+
 To use this project, follow these steps:
 
 1. Create your working environment.
