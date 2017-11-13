@@ -1,55 +1,39 @@
-# Heroku Django Starter Template
+# PURPLEMIND Muse 
 
-An utterly fantastic project starter template for Django 1.11.
+MUSE is the engine behind PURPLEMIND it powers the Web App and hooks up to the clients [OSX, iOS & Android] via RESTful API. 
+## Development 
 
-## Features
+PURPLEMIND Mandates that all developers use the PyCharm IDE for local Django Development, because we also rely on web-tech like Angular, it makes sense to make use of cross-compatability between JetBrains WebStorm & PyCharm IDE's. 
+Always test locally, before deploying to staging. 
 
-- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
-- Enhancements to Django's static file serving functionality via WhiteNoise.
-- Latest Python 3.6 runtime environment. 
+> Any fool can write code that a computer can understand, Good programmers write code that humans can understand. 
+##### -------> We work with lean, efficient & well documented codebases. 
 
-## How to Use
+## Deploying
 
-test 2
+Muse is deployed to Heroku-Staging automatically after a push to the Master Branch. [ Codeship will perform various Continuous Integration Tests on your code before it passes deployment ] 
 
-To use this project, follow these steps:
+![](https://purplemind.nyc3.digitaloceanspaces.com/Screen%20Shot%202017-11-13%20at%2015.34.26.png)
 
-1. Create your working environment.
-2. Install Django (`$ pip install django`)
-3. Create a new project using this template
+You may wish to read about: 
+ - Using Git from [the command line](https://github.com/codepath/ios_guides/wiki/Using-Git-with-Terminal) 
+ - Using Git [with Pycharm](https://www.jetbrains.com/help/pycharm/using-git-integration.html)
+ 
+Always format commit messages as such
+```sh
+cd ../purplemindMUSE
+git commit -m "## 0.0.3.4 ALPHA   - Change - Change - Fix - Change - Etc " 
+git push
+```
+ #### Staging
+Staging is accesible from: development-env.purplemind.io and it is restricted to developers who are a member of the PURPLEMIND Github Organisation. 
 
-## Creating Your Project
+**When successfully deployed, PM Github bot will ping slack**
+![](https://purplemind.nyc3.digitaloceanspaces.com/Screen%20Shot%202017-11-13%20at%2015.36.12.png)
+#### Production
+Prod resides on 
+```sh
+app.purplemind.io
+```
+> Staging changes can be promoted to the production environment via Heroku's web interface or CLI. Permissions required. 
 
-Using this template to create a new Django app is easy::
-
-    $ django-admin.py startproject --template=https://github.com/heroku/heroku-django-template/archive/master.zip --name=Procfile helloworld
-
-(If this doesn't work on windows, replace `django-admin.py` with `django-admin`)
-
-You can replace ``helloworld`` with your desired project name.
-
-## Deployment to Heroku
-
-    $ git init
-    $ git add -A
-    $ git commit -m "Initial commit"
-
-    $ heroku create
-    $ git push heroku master
-
-    $ heroku run python manage.py migrate
-
-See also, a [ready-made application](https://github.com/heroku/python-getting-started), ready to deploy.
-
-## Using Python 2.7?
-
-Just update `runtime.txt` to `python-2.7.13` (no trailing spaces or newlines!).
-
-
-## License: MIT
-
-## Further Reading
-
-- [Gunicorn](https://warehouse.python.org/project/gunicorn/)
-- [WhiteNoise](https://warehouse.python.org/project/whitenoise/)
-- [dj-database-url](https://warehouse.python.org/project/dj-database-url/)
