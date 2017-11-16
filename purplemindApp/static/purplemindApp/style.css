@@ -1,0 +1,14 @@
+h1, h3 {
+    font-family: Montserrat;
+    color: floralwhite;
+}
+body {
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    background-color: #1A1B22;
+    text-decoration-color: floralwhite
+}
+h3 {
+    font-weight: 100
+}
